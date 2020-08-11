@@ -1,21 +1,19 @@
 const axios = require('axios')
+const fs = require('fs')
 
-const isHd = true
-const api_key = 'lWVyvaBEdLuWGL1df3POmdO4ZYZ3JhWTwNcYuKkO'
-url = 'https://api.nasa.gov/planetary/apod?api_key='
+console.log('Reading config file...')
+config = JSON.parse(fs.readFileSync('config.json'))
 const imgTitle = document.getElementById('imgTitle')
 const imgDate = document.getElementById('imgDate')
 const imgExpl = document.getElementById('imgExpl')
 
-if (isHd) {
-    url += api_key + '&hd=true'
+if (config.hd) {
+    url = config.url += config.api_key + '&hd=true'
 } else {
-    url += api_key
+    url = config.url += config.api_key
 }
 
-console.log(url)
-console.log('Asking for info from NASA...')
-
+console.log('Querying NASAs APOD API...')
 axios.get(url)
 .then(function (response) {
     imgTitle.innerHTML = response.data.title
