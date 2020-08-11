@@ -8,9 +8,8 @@ window.onload = function() {
         hdBox.checked = true
     }
 
-    if (config.firstStart) {
+    if (config.api_key == "") {
         openSettings()
-        config.firstStart = false
     }
 
     api_key_inpt.value = config.api_key
