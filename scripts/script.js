@@ -14,12 +14,19 @@ if (isHd) {
 }
 
 console.log(url)
-console.log('Asking for info from NASAs API...')
+console.log('Asking for info from NASA...')
 
 axios.get(url)
 .then(function (response) {
     imgTitle.innerHTML = response.data.title
-    imgDate.innerHTML = response.data.date
+    imgDate.innerHTML = response.data.date + ' &#183; '
+    
+    if (response.data.copyright == undefined) {
+        imgDate.innerHTML += 'NASA/JPL'
+    } else {
+        imgDate.innerHTML += response.data.copyright
+    }
+
     imgExpl.innerHTML = response.data.explanation
 
     if (response.data.media_type != 'image') {
@@ -32,7 +39,3 @@ axios.get(url)
     // Prints errors to the console
     console.log(error)
 })
-
-function showOptions() {
-    console.log('Settings opened')
-}
