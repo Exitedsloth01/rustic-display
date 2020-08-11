@@ -1,0 +1,15 @@
+body {
+    color: white;
+    margin: 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.imgDesc {
+    background-color: rgba(128, 128, 128, 0.5);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,25 @@
+{
+    "name": "rustic-display",
+    "version": "0.1.0",
+    "description": "A display showing the NASA image of the day along with the description, date and title.",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Exitedsloth01/rustic-display.git"
+    },
+    "author": "Exitedsloth01",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Exitedsloth01/rustic-display/issues"
+    },
+    "homepage": "https://github.com/Exitedsloth01/rustic-display#readme",
+    "devDependencies": {
+        "electron": "^9.2.0"
+    },
+    "dependencies": {
+        "axios": "^0.19.2"
+    }
+}
