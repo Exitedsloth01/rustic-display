@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet"> 
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Rustic Display</title>
         <link rel="stylesheet" href="style/style.css">
@@ -11,6 +10,8 @@
     </head>
 
     <body>
+        <span onclick="openSettings()">&#9881;</span>
+
         <!-- div containing the image info -->
         <div class="imgDesc">
             <h1 id="imgTitle" style="margin-bottom: 0; padding-left: 10px;"></h1>
@@ -18,7 +19,32 @@
             <p id="imgExpl" style="padding: 10px;"></p>
         </div>
 
+        <!-- The Modal -->
+        <div id="settingsModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Display Settings</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="hd-sett">
+                        <input style="float: left;" id="hdBox" type="checkbox">
+                        <p style="overflow: hidden;">Use HD images</p>
+                    </div>
+
+                    <div class="api-sett">
+                        <p style="margin-bottom: 0;">API key:</p>
+                        <textarea id="api_key_inpt" rows="4" style="resize: none;"></textarea>
+                    </div>
+
+                    <button style="margin-bottom: 20px;" onclick="saveSettings()">Save Settings</button>
+                </div>
+            </div>
+  
+        </div>
+
         <script src="scripts/script.js"></script>
-        <script src="scripts/modal.js"></script>
+        <script src="scripts/settings.js"></script>
     </body>
 </html>
