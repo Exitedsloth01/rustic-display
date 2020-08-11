@@ -25,5 +25,6 @@ function saveSettings() {
     config.api_key = api_key_inpt.value
     fs.writeFileSync('config.json', JSON.stringify(config, null, 4))
 
-    location.reload()
+    getInfo()
+    closeSettings()
 }
