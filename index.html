@@ -10,6 +10,10 @@
     </head>
 
     <body>
+        <span onclick="openSettings()">&#9881;</span>
+
+        <h1 style="float: right; margin: 0; font-family: 'Orbitron', sans-serif;" id="clock"></h1>
+
         <!-- div containing the image info -->
         <div class="imgDesc">
             <h1 id="imgTitle" style="margin-bottom: 0; padding-left: 10px;"></h1>
@@ -17,7 +21,37 @@
             <p id="imgExpl" style="padding: 10px;"></p>
         </div>
 
+        <!-- The Modal -->
+        <div id="settingsModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Display Settings</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="hd-sett">
+                        <input style="float: left;" id="hdBox" type="checkbox">
+                        <p style="overflow: hidden;">Use HD images</p>
+                    </div>
+
+                    <div class="update-sett">
+                        <p style="margin-bottom: 0;">Update checks per hour:</p>
+                        <input max="1000" type="number" id="numUpCheck">
+                    </div>
+
+                    <div class="api-sett">
+                        <p style="margin-bottom: 0;">API key:</p>
+                        <textarea id="api_key_inpt" rows="4" style="resize: none;"></textarea>
+                    </div>
+
+                    <button style="margin-bottom: 20px;" onclick="saveSettings()">Save Settings</button>
+                </div>
+            </div>
+  
+        </div>
+
         <script src="scripts/script.js"></script>
-        <script src="scripts/modal.js"></script>
+        <script src="scripts/settings.js"></script>
     </body>
 </html>

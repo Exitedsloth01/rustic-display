@@ -12,7 +12,7 @@ function createWindow() {
 
     // Sets the screen to fullscreen
     win.setFullScreen(true)
-
+    
     // Hides the menu bar
     win.setAutoHideMenuBar(true)
     win.setMenuBarVisibility(false)
