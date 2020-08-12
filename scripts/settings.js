@@ -30,6 +30,5 @@ function saveSettings() {
     config.updateInterval = numUpCheck.value
     fs.writeFileSync('config.json', JSON.stringify(config, null, 4))
 
-    getInfo()
-    closeSettings()
+    location.reload()
 }
