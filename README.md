@@ -11,14 +11,16 @@ It runs electron as it's base.
 
 ## Installation
 
-Clone the repository:
-
 ```bash
+# Clone the repository:
 git clone https://github.com/Exitedsloth01/Rustic-Display
-```
 
-Movie into the directory:
-
-´´´bash
+# Move into the directory:
 cd Rustic-Display
-´´´
+
+# Install dependencies:
+npm install
+
+# Start the app:
+npm start
+```
