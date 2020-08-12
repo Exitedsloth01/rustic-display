@@ -4,12 +4,12 @@ A display showing the NASA image of the day along with the description, date and
 I know the code is bad, I'm not a javascript programmer.\
 It runs electron as it's base.
 
-## Requirements
+## Requirements:
 
 - [NodeJS](https://nodejs.org/)
 - [NASA API key](https://api.nasa.gov/)
 
-## Installation
+## Installation:
 
 ```bash
 # Clone the repository:
