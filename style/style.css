@@ -4,15 +4,21 @@ html, body {
     height: 100%;
 }
 
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
 body {
     color: white;
+    background-color: black;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: black;
 }
 
 .imgDesc {

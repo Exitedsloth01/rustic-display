@@ -1,6 +1,6 @@
 {
     "hd": true,
     "updateInterval": "60",
-    "api_key": "",
-    "url": "https://api.nasa.gov/planetary/apod?api_key="
+    "nasa_key": "",
+    "owm_key": ""
 }
