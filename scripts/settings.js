@@ -18,7 +18,7 @@ window.onload = function() {
 
     nasa_key_inpt.value = config.nasa_key
     owm_key_inpt.value = config.owm_key
-    numUpCheck.value = config.updateInterval
+    numUpCheck.value = parseInt(config.updateInterval)
 }
 
 function saveSettings() {
@@ -30,7 +30,7 @@ function saveSettings() {
 
     config.nasa_key = nasa_key_inpt.value
     config.owm_key = owm_key_inpt.value
-    config.updateInterval = numUpCheck.value
+    config.updateInterval = parseInt(numUpCheck.value)
     fs.writeFileSync('config.json', JSON.stringify(config, null, 4))
 
     location.reload()
