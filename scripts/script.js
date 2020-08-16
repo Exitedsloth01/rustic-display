@@ -17,7 +17,7 @@ const msInHour = 3600000
 // Get info from NASAs API
 function getInfo() {
     console.log('Querying NASAs APOD API...')
-    axios.get(config.url + config.api_key)
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=' + config.nasa_key)
     .then(function (response) {
         // Sets the title of the image
         imgTitle.innerHTML = response.data.title
@@ -80,9 +80,10 @@ function setClock() {
 
 // Query NASAs API
 getInfo()
+// Write clock to screen
+setClock()
 
 // Update clock every second
 setInterval(setClock, 1000)
 // Update information user defined times per hour
-// TODO: Fix update issue to actually update information
 setInterval(getInfo, msInHour/config.updateInterval)

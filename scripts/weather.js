@@ -3,7 +3,7 @@ const weatherCond = document.getElementById('weatherCond')
 const weatherTemp = document.getElementById('weatherTemp')
 
 function checkWeather() {
-    axios.get('https://api.openweathermap.org/data/2.5/weather?id=2693555&units=metric&appid=5ee18850c8d1647b7d4884149f2724b2')
+    axios.get('https://api.openweathermap.org/data/2.5/weather?id=2693555&units=metric&appid=' + config.owm_key)
     .then(function (weatherData) {
         weatherIco.src = 'https://openweathermap.org/img/wn/' + weatherData.data.weather[0].icon + '.png'
         weatherTemp.innerHTML = weatherData.data.main.temp + '&#176;C'
@@ -17,5 +17,4 @@ function checkWeather() {
 }
 
 checkWeather()
-
 setInterval(checkWeather, 60000)
