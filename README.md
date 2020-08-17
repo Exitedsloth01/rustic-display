@@ -2,7 +2,7 @@
 
 ![Preview Image](images/example.png)
 
-A display showing the NASA image of the day along with the description, date and title. It also uses OpenWeatherMap for weather information\
+A display showing the NASA image of the day along with the description, date and title. It also uses OpenWeatherMap for weather information.\
 I know the code is bad, I'm not a javascript programmer.\
 It runs electron as it's base.
 
