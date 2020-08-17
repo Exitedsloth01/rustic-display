@@ -2,6 +2,7 @@
 
 html, body {
     height: 100%;
+    cursor: none;
 }
 
 header {
@@ -22,7 +23,7 @@ body {
 }
 
 .imgDesc {
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: rgba(125, 125, 125, 0.5);
     position: fixed;
     bottom: 0;
     width: 100%;
