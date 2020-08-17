@@ -1,13 +1,15 @@
 # Rustic Display
 
-A display showing the NASA image of the day along with the description, date and title.\
-I know the code is bad, I'm not a javascript programmer.\
-It runs electron as it's base.
+![Preview Image](images/example.png)
+
+A display showing the NASA image of the day along with the description, date and title. It also uses OpenWeatherMap for weather information.\
+I know the code is bad, I'm not a javascript programmer.
 
 ## Requirements:
 
 - [NodeJS](https://nodejs.org/)
 - [NASA API key](https://api.nasa.gov/)
+- [OpenWeatherMap API key](https://openweathermap.org/)
 
 ## Installation:
 

@@ -10,9 +10,15 @@
     </head>
 
     <body>
-        <span onclick="openSettings()">&#9881;</span>
+        <header>
+            <div style="float: left;" class="weatherInfo">
+                <img style="float: left;" id="weatherIco">
+                <h1 style="float: left; margin: 0;" id="weatherCond" style="margin-bottom: 0;"></h1>
+                <h4 style="margin-top: 0;" id="weatherTemp"></h4>
+            </div>
 
-        <h1 style="float: right; margin: 0; font-family: 'Orbitron', sans-serif;" id="clock"></h1>
+            <h1 style="float: right; margin: 0; font-family: 'Orbitron', sans-serif;" id="clock"></h1>
+        </header>
 
         <!-- div containing the image info -->
         <div class="imgDesc">
@@ -41,11 +47,18 @@
                     </div>
 
                     <div class="api-sett">
-                        <p style="margin-bottom: 0;">API key:</p>
-                        <textarea id="api_key_inpt" rows="4" style="resize: none;"></textarea>
+                        <div>
+                            <p style="margin-bottom: 0;">NASA API key:</p>
+                            <textarea id="nasa_key_inpt" rows="4" style="resize: none;"></textarea>
+                        </div>
+
+                        <div>
+                            <p style="margin-bottom: 0;">OpenWeatherMap API key:</p>
+                            <textarea id="owm_key_inpt" rows="4" style="resize: none;"></textarea>
+                        </div>
                     </div>
 
-                    <button style="margin-bottom: 20px;" onclick="saveSettings()">Save Settings</button>
+                    <button style="margin-bottom: 20px; float: left;" onclick="saveSettings()">Save Settings</button>
                 </div>
             </div>
   
@@ -53,5 +66,6 @@
 
         <script src="scripts/script.js"></script>
         <script src="scripts/settings.js"></script>
+        <script src="scripts/weather.js"></script>
     </body>
 </html>

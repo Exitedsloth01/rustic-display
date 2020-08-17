@@ -17,21 +17,22 @@ const msInHour = 3600000
 // Get info from NASAs API
 function getInfo() {
     console.log('Querying NASAs APOD API...')
-    axios.get(config.url + config.api_key)
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=' + config.nasa_key)
     .then(function (response) {
         // Sets the title of the image
         imgTitle.innerHTML = response.data.title
-        // Write the date date
-        imgDate.innerHTML = response.data.date + ' &#8226; '
     
         // Gets the image copyright holder
         if (response.data.copyright == undefined) {
             // If no copyright information provided, assume NASA/JPL
-            imgDate.innerHTML += 'NASA/JPL'
+            imgDate.innerHTML = 'NASA/JPL'
         } else {
             // Writes the copyright holders name next to the date
-            imgDate.innerHTML += response.data.copyright
+            imgDate.innerHTML = response.data.copyright
         }
+
+        // Write the date date
+        imgDate.innerHTML += ' &#8226; ' + response.data.date
 
         // Writes the image description
         imgExpl.innerHTML = response.data.explanation
@@ -80,9 +81,10 @@ function setClock() {
 
 // Query NASAs API
 getInfo()
+// Write clock to screen
+setClock()
 
 // Update clock every second
 setInterval(setClock, 1000)
 // Update information user defined times per hour
-// TODO: Fix update issue to actually update information
 setInterval(getInfo, msInHour/config.updateInterval)
