@@ -21,17 +21,18 @@ function getInfo() {
     .then(function (response) {
         // Sets the title of the image
         imgTitle.innerHTML = response.data.title
-        // Write the date date
-        imgDate.innerHTML = response.data.date + ' &#8226; '
     
         // Gets the image copyright holder
         if (response.data.copyright == undefined) {
             // If no copyright information provided, assume NASA/JPL
-            imgDate.innerHTML += 'NASA/JPL'
+            imgDate.innerHTML = 'NASA/JPL'
         } else {
             // Writes the copyright holders name next to the date
-            imgDate.innerHTML += response.data.copyright
+            imgDate.innerHTML = response.data.copyright
         }
+
+        // Write the date date
+        imgDate.innerHTML += ' &#8226; ' + response.data.date
 
         // Writes the image description
         imgExpl.innerHTML = response.data.explanation
