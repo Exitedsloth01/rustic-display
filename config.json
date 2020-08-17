@@ -1,6 +1,6 @@
 {
     "hd": true,
-    "updateInterval": 61,
+    "updateInterval": 60,
     "nasa_key": "",
     "owm_key": ""
 }
