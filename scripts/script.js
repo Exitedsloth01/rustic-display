@@ -1,6 +1,5 @@
 const axios = require('axios')
 const fs = require('fs')
-const ColorThief = require('colorthief')
 
 // Reads the config file
 console.log('Reading config file...')
