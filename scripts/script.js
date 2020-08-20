@@ -1,5 +1,6 @@
 const axios = require('axios')
 const fs = require('fs')
+const ColorThief = require('colorthief')
 
 // Reads the config file
 console.log('Reading config file...')
@@ -11,6 +12,7 @@ const imgDate = document.getElementById('imgDate')
 const imgExpl = document.getElementById('imgExpl')
 const modal = document.getElementById('settingsModal')
 const clock = document.getElementById('clock')
+const imgCon = document.getElementsByClassName('imgDesc')
 // Define how many ms in an hour
 const msInHour = 3600000
 
