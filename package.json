@@ -17,7 +17,6 @@
     },
     "homepage": "https://github.com/Exitedsloth01/rustic-display#readme",
     "devDependencies": {
-        "colorthief": "^2.3.2",
         "electron": "^9.2.0"
     },
     "dependencies": {
