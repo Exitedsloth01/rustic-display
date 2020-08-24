@@ -53,7 +53,7 @@ function getInfo() {
     })
     .catch(function (error){
         // Prints errors to the console
-        console.log(error)
+        showNotice('NASA API Error:', error)
     })
 }
 

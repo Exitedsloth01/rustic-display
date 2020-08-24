@@ -10,7 +10,7 @@ function checkWeather() {
         weatherCond.innerHTML = weatherData.data.weather[0].main
     })
     .catch(function (error) {
-        console.log(error)
+        showNotice('Weather Error:', error)
     })
 
     console.log('Updated weather')
