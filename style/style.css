@@ -54,7 +54,7 @@ body {
 
 @keyframes dropNotice {
     0% {top: -500px;}
-    30% {top: 10px;}
+    20% {top: 10px;}
     75% {top: 10px;}
     100% {top: -500px;}
 }
