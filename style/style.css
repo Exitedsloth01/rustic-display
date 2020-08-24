@@ -27,3 +27,34 @@ body {
     bottom: 0;
     width: 100%;
 }
+
+#notice {
+    top: 50px;
+    margin: auto;
+    display: none;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid black;
+    animation: dropNotice 5s forwards;
+    background-color: white;
+    text-overflow: clip;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+}
+
+@keyframes expandNotice {
+    0% {width: 0px;}
+    30% {width: 500px;}
+    70% {width: 500px;}
+    100% {width: 0px;}
+}
+
+@keyframes dropNotice {
+    0% {top: -500px;}
+    30% {top: 10px;}
+    75% {top: 10px;}
+    100% {top: -500px;}
+}
