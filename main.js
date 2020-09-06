@@ -17,7 +17,7 @@ function createWindow() {
     win.setAutoHideMenuBar(true)
     win.setMenuBarVisibility(false)
 
-    // Load the idnex.html file
+    // Load the index.html file
     win.loadFile('index.html')
 }
 
